@@ -50,6 +50,10 @@ export const style = StyleSheet.create({
         borderRadius: 40,
         marginTop:1,
         flexDirection: 'row'
+    },
+    input:{
+        height: '100%',
+        width: '100%'
     }
 }
     

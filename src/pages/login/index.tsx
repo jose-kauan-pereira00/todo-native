@@ -21,7 +21,7 @@ export default function Login(){
 
                 <Text style={style.inputTitle}>ENDEREÇO DE E-MAIL</Text>
                     <View style={style.boxInput}>
-                        <TextInput />
+                        <TextInput style={style.input}/>
                     </View>
                 
 
