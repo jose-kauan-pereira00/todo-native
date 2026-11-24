@@ -11,7 +11,6 @@ export const style = StyleSheet.create({
     boxTop:{
         width: '100%',
         height: Dimensions.get('window').height/3,
-        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -19,13 +18,13 @@ export const style = StyleSheet.create({
     boxMiddle:{
         width: '100%',
         height: Dimensions.get('window').height/4,
-        backgroundColor: 'blue',
         paddingHorizontal: 37
     },
     boxBottom:{
         width: '100%',
         height: Dimensions.get('window').height/3,
-        backgroundColor: 'green'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
     logo:{
@@ -48,12 +47,21 @@ export const style = StyleSheet.create({
         height: 40,
         borderWidth: 1,
         borderRadius: 40,
-        marginTop:1,
-        flexDirection: 'row'
+        marginTop:10,
+        flexDirection: 'row',
+        alignContent: 'center',
+        paddingTop: 5,
+        paddingHorizontal: 10,
+        backgroundColor:themes.colors.lightGray,
+        borderColor: themes.colors.lightGray
     },
     input:{
         height: '100%',
-        width: '100%'
+        borderRadius: 40,
+        width: '90%'
+    },
+    button:{
+
     }
 }
     
