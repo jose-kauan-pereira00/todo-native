@@ -49,8 +49,8 @@ export const style = StyleSheet.create({
         marginTop:10,
         flexDirection: 'row',
         alignContent: 'center',
-        paddingTop: 5,
-        paddingHorizontal: 10,
+        paddingTop: 8,
+        paddingHorizontal: 5,
         backgroundColor:themes.colors.lightGray,
         borderColor: themes.colors.lightGray
     },
@@ -75,14 +75,16 @@ export const style = StyleSheet.create({
         shadowRadius: 4.65,
         elevation: 7
     },
-    textBotton:{
+    textButton:{
         fontSize: 16,
         color: 'white',
         fontWeight: 'bold'
     },
     textoConta:{
-        
-    }
+        fontSize: 16,
+        color: themes.colors.gray
+    },
+    
 }
     
 )

@@ -1,11 +1,31 @@
-import React from "react";
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useState } from "react";
+import { Alert, Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { style } from "./style";
 import Logo from '../../assets/logo.png';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { themes } from "../../global/themes";
 
 export default function Login(){
+    const[email,setEmail] =  useState('');
+    const[password, setPassword] = useState('');
+
+     async function getLoguin(){
+        try{
+            if(!email || !password){
+                return Alert.alert('informe os campos obrigatorios');
+            }
+            if(email == 'admin' && password == 'admin'){
+                Alert.alert('logado com sucesso');
+            }else{
+                Alert.alert('Usuario ou Senha incorreta!')
+            }
+              
+        } catch(err){
+            console.log(err);
+        }
+        
+    }
+
     return (
        <View style={style.container}>
             <View style={style.boxTop}>
@@ -23,7 +43,10 @@ export default function Login(){
 
                 <Text style={style.inputTitle}>ENDEREÇO DE E-MAIL</Text>
                     <View style={style.boxInput}>
-                        <TextInput style={style.input}/>
+                        <TextInput 
+                        style={style.input}
+                        value={email}
+                        onChangeText={ (e) => setEmail(e)}/>
                         <MaterialIcons name="email"
                         size={20}
                         color={themes.colors.gray}/>
@@ -32,7 +55,9 @@ export default function Login(){
 
                 <Text style={style.inputTitle}>SENHA</Text>
                  <View style={style.boxInput}>
-                        <TextInput style={style.input}/>
+                        <TextInput style={style.input}
+                        value={password}
+                        onChangeText={setPassword}/>
                         <MaterialIcons name="remove-red-eye"
                         size={20}
                         color={themes.colors.gray}/>
@@ -40,11 +65,13 @@ export default function Login(){
             </View>
 
             <View style={style.boxBottom}>
-                <TouchableOpacity style={style.button}>
-                    <Text style={style.textBotton}>Entrar</Text>
+                <TouchableOpacity style={style.button} onPress={() => getLoguin()}>
+                    <Text style={style.textButton}>Entrar</Text>
                 </TouchableOpacity>
             </View>
-            <Text style={style.textoConta}>Não Possui Conta? Crie uma </Text>
+            <Text style={style.textoConta}>
+                Não Possui Conta? <Text style={{color:themes.colors.primary}}>Crie uma</Text>
+            </Text>
        </View>
     )
 }
