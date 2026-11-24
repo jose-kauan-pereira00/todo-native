@@ -12,7 +12,7 @@ export default function Login(){
      async function getLoguin(){
         try{
             if(!email || !password){
-                return Alert.alert('informe os campos obrigatorios');
+                return Alert.alert('Informe os campos obrigatorios');
             }
             if(email == 'admin' && password == 'admin'){
                 Alert.alert('logado com sucesso');
