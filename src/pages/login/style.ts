@@ -24,8 +24,7 @@ export const style = StyleSheet.create({
         width: '100%',
         height: Dimensions.get('window').height/3,
         alignItems: 'center',
-        justifyContent: 'center'
-    },
+        justifyContent: 'center'    },
 
     logo:{
         width: 80,
@@ -61,7 +60,28 @@ export const style = StyleSheet.create({
         width: '90%'
     },
     button:{
-
+        width: 250,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: themes.colors.primary,
+        borderRadius: 40,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 3
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7
+    },
+    textBotton:{
+        fontSize: 16,
+        color: 'white',
+        fontWeight: 'bold'
+    },
+    textoConta:{
+        
     }
 }
     

@@ -41,9 +41,10 @@ export default function Login(){
 
             <View style={style.boxBottom}>
                 <TouchableOpacity style={style.button}>
-                    <Text>Entrar</Text>
+                    <Text style={style.textBotton}>Entrar</Text>
                 </TouchableOpacity>
             </View>
+            <Text style={style.textoConta}>Não Possui Conta? Crie uma </Text>
        </View>
     )
 }
