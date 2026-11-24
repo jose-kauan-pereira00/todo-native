@@ -42,6 +42,14 @@ export const style = StyleSheet.create({
         marginLeft:5,
         color: themes.colors.gray,
         marginTop: 20
+    },
+    boxInput:{
+        width: '100%',
+        height: 40,
+        borderWidth: 1,
+        borderRadius: 40,
+        marginTop:1,
+        flexDirection: 'row'
     }
 }
     

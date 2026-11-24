@@ -18,10 +18,17 @@ export default function Login(){
             </View>
 
             <View style={style.boxMiddle}>
+
                 <Text style={style.inputTitle}>ENDEREÇO DE E-MAIL</Text>
-                <TextInput>
-                    <Text style={style.inputTitle}>SENHA</Text>
-                </TextInput>
+                    <View style={style.boxInput}>
+                        <TextInput />
+                    </View>
+                
+
+                <Text style={style.inputTitle}>SENHA</Text>
+                 <View style={style.boxInput}>
+                    <TextInput />
+                </View>
             </View>
 
             <View style={style.boxBottom}>
